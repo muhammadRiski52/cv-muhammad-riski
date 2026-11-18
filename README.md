@@ -1,23 +1,29 @@
 # Profil & CV — Muhammad Riski
 
-Website profil statis (HTML, CSS, JavaScript) tanpa build tool. Bisa langsung dipasang di GitHub Pages.
+Website profil statis (HTML, CSS, JavaScript), tanpa build tool.
 
-## Struktur
-- `index.html` — isi halaman
-- `css/style.css` — tampilan (tema gradient gelap)
-- `js/script.js` — animasi
-- `assets/` — foto profil dan ikon
-
-## Jalankan lokal
-Buka `index.html` di browser, atau:
+## Struktur folder
 ```
-python3 -m http.server 8000
+myweb/
+├── index.html        halaman utama
+├── css/style.css     tampilan (tema gradient gelap)
+├── js/script.js      animasi
+├── assets/           foto profil & ikon
+└── README.md
 ```
 
-## Deploy ke GitHub Pages
-1. Push repo ke GitHub.
-2. Settings → Pages → Source: `Deploy from a branch` → Branch: `main` / `(root)`.
-3. Website aktif di `https://USERNAME.github.io/NAMA-REPO/`.
+## Lihat di komputer
+Buka `index.html` di browser (folder harus utuh, jangan dibuka dari dalam ZIP).
+
+## Perbarui website
+```
+git add -A
+git commit -m "catatan perubahan"
+git push
+```
+
+## GitHub Pages
+Settings → Pages → Source: `Deploy from a branch` → `main` / `(root)`.
 
 ## Ubah nomor WhatsApp
-Cari `6285954685215` di `index.html` dan ganti (format internasional tanpa `+` atau `0` di depan).
+Cari `6285954685215` di `index.html` lalu ganti (format internasional, tanpa + atau 0 di depan).

@@ -43,3 +43,18 @@ if (lb) {
   lb.addEventListener('click', (e) => { if (e.target === lb || e.target.closest('.lb-close')) close(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
 }
+
+// Menu hamburger (HP)
+const navEl = document.querySelector('.nav');
+const menuBtn = document.querySelector('.menu-btn');
+if (navEl && menuBtn) {
+  const setMenu = (open) => {
+    navEl.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+  };
+  menuBtn.addEventListener('click', () => setMenu(!navEl.classList.contains('open')));
+  navEl.querySelectorAll('nav a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('click', (e) => { if (!navEl.contains(e.target)) setMenu(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+}
